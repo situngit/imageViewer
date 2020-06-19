@@ -64,7 +64,7 @@ class DashBoardActivity : AppCompatActivity() {
             override fun onResponse(call: Call<ImageLoaderResponse>, response: Response<ImageLoaderResponse>) {
 
                 Utility.hideProgressDialog()
-                for (i in 1 ..(response.body()?.getData()?.children!!.size - 1)) {
+                for (i in 0 ..(response.body()?.getData()?.children!!.size - 1)) {
                     images.add(
                         ImageLoadModel(
                             response.body()?.getData()?.children?.get(i)?.data?.url.toString(),
